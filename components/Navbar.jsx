@@ -8,7 +8,7 @@ const Navbar = () => {
             <span className='text-purple-500'>&lt; </span><span>Pass</span><span className='text-purple-500'>Manage</span> <span className='text-purple-500'> /</span><span className='text-purple-500'> &gt;</span>
         </div>
 
-        <div className="login p-2 px-6 mr-16 text-xl cursor-pointer gradient-btn">
+        <div className="login p-2 px-6 mr-16 text-lg cursor-pointer gradient-btn font-semibold">
             LogIn
         </div>
       </nav>
