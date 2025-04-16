@@ -2,7 +2,7 @@ import React from 'react'
 
 const Urlinput = () => {
   return (
-    <div className='w-[45vw] border-2 border-red-500'>
+    <div className='Urlbox w-[45vw] rounded-lg bg-[#1f1f1f]'>
 
       <div className="icon text-2xl text-center py-3">
         <span className='text-purple-500'>&lt; </span><span>Pass</span><span className='text-purple-500'>Manage</span> <span className='text-purple-500'> /</span><span className='text-purple-500'> &gt;</span>
@@ -31,8 +31,11 @@ const Urlinput = () => {
         </div>
       </div>
 
-      <div className="Save w-full py-3">
-        <button className='gradient-btn m-auto text-xl py-2 px-6 font-semibold'>Save</button>
+      <div className="save-box w-full flex justify-center py-3 items-center">
+        <button className='save-btn relative cursor-pointer h-12 w-24 rounded-full'>
+          <div className="save-btn-bg absolute center-save bg-[#2f2f2f] w-[93%] h-[90%] rounded-full"></div>
+          <div className="save-btn-content absolute center-save text-lg font-semibold">Save</div>
+        </button>
       </div>
 
     </div>

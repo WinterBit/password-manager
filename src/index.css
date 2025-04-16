@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root{
+:root {
     background: #111;
     color: #fff;
 }
@@ -24,12 +24,53 @@
     width: 103%;
     height: 107%;
     position: absolute;
-    background: linear-gradient(to bottom right,#008cff,#e100ff);
+    background: linear-gradient(to bottom right, #008cff, #e100ff);
     border-radius: 1000px;
     z-index: -1;
 }
 
-.gradient-btn:hover{
+.gradient-btn:hover {
     z-index: 0;
-    box-shadow:  40px 0 100px #008cff78,-40px 0 100px #e100ff78 ;
+    box-shadow: 40px 0 100px #008cff78, -40px 0 100px #e100ff78;
+}
+
+.Urlbox {
+    position: relative;
+}
+
+.Urlbox::after,
+.Urlbox::before {
+    content: '';
+    width: 101%;
+    height: 102%;
+    position: absolute;
+    background: conic-gradient(#008cff, #e100ff, #008cff);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border-radius: 8px;
+}
+
+.Urlbox::before {
+    filter: blur(1rem);
+    opacity: 0.5;
+}
+
+.center-save {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.save-btn {
+    background: linear-gradient(to bottom right, #008cff, #e100ff);
+}
+
+.save-btn:hover {
+    box-shadow: 40px 0 100px #008cff78, -40px 0 100px #e100ff78;
+}
+
+.save-btn:hover .save-btn-bg{
+    opacity: 0;
 }
