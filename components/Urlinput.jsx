@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Urlinput = () => {
+  const [password, setPassword] = useState("");
+  const [visible, setVisible] = useState(false)
   return (
     <div className='Urlbox w-[45vw] rounded-lg bg-[#1f1f1f]'>
 
@@ -25,16 +27,50 @@ const Urlinput = () => {
 
           <div className="passWord flex flex-col gap-1 w-[48%]">
             <label className='text-sm font-bold' htmlFor="password">Password</label>
-            <input className='bg-transparent outline-none border-[1px] border-gray-500 placeholder-gray-700 p-2 rounded-lg' type="password" id='password' placeholder='Enter your password' />
+            <input className='bg-transparent outline-none border-[1px] border-gray-500 placeholder-gray-700 p-2 rounded-lg relative'
+              type={visible ? 'text' : 'password'}
+              id='password'
+              placeholder='Enter your password'
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
+            />
+
+            <div className="eye-icon absolute right-[40px] bottom-[88px]" onClick={() => setVisible(!visible)}>
+              {visible ?
+                <lord-icon
+                  src="https://cdn.lordicon.com/wepoiyzv.json"
+                  trigger="hover"
+                  stroke='bold'
+                  colors="primary:#008cff,secondary:#e100ff"
+                  style={{ width: '35px', height: '35px' }}>
+                </lord-icon>
+                : <lord-icon
+                  src="https://cdn.lordicon.com/wepoiyzv.json"
+                  trigger="hover"
+                  state="hover-cross"
+                  stroke='bold'
+                  colors="primary:#008cff,secondary:#e100ff"
+                  style={{ width: '35px', height: '35px' }}>
+                </lord-icon>
+              }
+            </div>
           </div>
 
         </div>
       </div>
 
       <div className="save-box w-full flex justify-center py-3 items-center">
-        <button className='save-btn relative cursor-pointer h-12 w-24 rounded-full'>
+        <button className='save-btn relative cursor-pointer h-12 w-28 rounded-full'>
           <div className="save-btn-bg absolute center-save bg-[#2f2f2f] w-[93%] h-[90%] rounded-full"></div>
-          <div className="save-btn-content absolute center-save text-lg font-semibold">Save</div>
+          <div className="save-btn-content absolute center-save text-lg font-semibold w-[65%] flex justify-between items-center">
+            <lord-icon
+              src="https://cdn.lordicon.com/efxgwrkc.json"
+              trigger="hover"
+              colors="primary:#ffffff"
+              style={{ width: '35px', height: '35px' }}>
+            </lord-icon>
+            Save
+          </div>
         </button>
       </div>
 

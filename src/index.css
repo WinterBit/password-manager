@@ -21,8 +21,8 @@
 
 .gradient-btn::after {
     content: '';
-    width: 103%;
-    height: 107%;
+    width: 106%;
+    height: 110%;
     position: absolute;
     background: linear-gradient(to bottom right, #008cff, #e100ff);
     border-radius: 1000px;
